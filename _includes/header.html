@@ -34,16 +34,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    </head>
+</head>
 
 <body>
 
@@ -67,14 +58,21 @@
                             <span class="subheading">{{page.description}}</span>
                         {% endif %}
 
+                        <aside class="sharing">
+                        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                        </aside>
+
                     </div>
                 </div>
+            </div>
 
-                {% if page.url == '/index.html' %}
+
+            {% if page.url == '/index.html' %}
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
                         <li>
-                            <a href="https://twitter.com/fromdenisvieira" target="_blank">
+                            <a href="https://twitter.com/steelx">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -82,7 +80,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/fromdenisvieira" target="_blank">
+                            <a href="http://www.facebook.com/ajinkya.borade">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -90,31 +88,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://plus.google.com/+DenisVieiraGoogle" target="_blank">
+                            <a href="https://plus.google.com/+AjinkyaBorade?rel=author">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
-                        <li>
-                            <a href="https://plus.google.com/+DenisVieiraGoogle" target="_blank">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>                    
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2015</p>
                 </div>
-                {% endif %}
-                
-                <aside class="sharing">
-                <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
-                </aside>                
-            </div>
-          
+            </div>                
+
+            {% endif %}
         </div>
 
     </header>
