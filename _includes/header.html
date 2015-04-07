@@ -34,14 +34,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+
 
     </head>
 
@@ -93,26 +86,38 @@
                             <a href="https://plus.google.com/+DenisVieiraGoogle" target="_blank">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://plus.google.com/+DenisVieiraGoogle" target="_blank">
+                            <a href="https://github.com/fromdenisvieira" target="_blank">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
                                     <i class="fa fa-github fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
                         </li>
-                    </ul>                    
+                     <aside class="sharing">
+                        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
+                    </aside>  
+
+                    </ul>  
+
+
                 </div>
                 {% endif %}
-                
-                <aside class="sharing">
-                <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
-                </aside>                
+
+                              
             </div>
           
         </div>
