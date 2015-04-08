@@ -1,5 +1,5 @@
 markdown: redcarpet
-paginate: 4
+paginate: 5
 
-gems:
- - jekyll-sitemap
+#gems:
+# - jekyll-sitemap

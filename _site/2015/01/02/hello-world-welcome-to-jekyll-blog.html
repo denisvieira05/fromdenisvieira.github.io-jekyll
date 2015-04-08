@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <link rel="canonical" href="{{page.url | prepend: site.url}}" />
+    <link rel="canonical" href="/2015/01/02/hello-world-welcome-to-jekyll-blog.html" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{page.description}}">
-    {% if page.author %}
-    <meta name="author" content="{{page.author}}">
-    {% endif %}
-    {% if page.coverImg %}
-    <meta property="og:image" content="{{page.coverImg | prepend: site.url}}" />
-    {% endif %}
+    <meta name="description" content="An awesome introduction to jekyll and its features.">
+    
+    <meta name="author" content="Ajinkya Borade">
+    
+    
+    <meta property="og:image" content="post-bg.jpg" />
+    
 
-    <title>{{page.title}}</title>
+    <title>Hello world welcome to jekyll blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ site.url }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ site.url }}/css/clean-blog.css" rel="stylesheet">
+    <link href="/css/clean-blog.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -59,32 +59,118 @@
 <body>
 
     <!-- Navigation -->
-    {% include nav.html %}
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/index.html">FROMDENISVIEIRA</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/index.html" class="">Homepage</a></li>
+                
+                
+                
+  
+
+  
+
+  
+
+  
+    
+      <li>
+          <a href="/about.html">Sobre</a>
+      </li>
+    
+  
+
+  
+    
+      <li>
+          <a href="/works.html">Portfolio</a>
+      </li>
+    
+  
+
+  
+    
+      <li>
+          <a href="/contact.html">Contato</a>
+      </li>
+    
+  
+
+
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('{{ site.url }}/img/{{page.coverImg}}')">
+    <header class="intro-header" style="background-image: url('/img/post-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>{{page.title}}</h1>
+                        <h1>Hello world welcome to jekyll blog</h1>
                         <hr class="small">
                         
-                        {% if page.author %}
-                            <h2 class="subheading">{{page.description}}</h2>
-                            <span class="meta">Posted by <a href="#">{{page.author}}</a> on {{page.date | date_to_string}}</span>
-                        {% else %}
-                            <span class="subheading">{{page.description}}</span>
-                        {% endif %}
+                        
+                            <h2 class="subheading">An awesome introduction to jekyll and its features.</h2>
+                            <span class="meta">Posted by <a href="#">Ajinkya Borade</a> on 02 Jan 2015</span>
+                        
 
                     </div>
                 </div>
 
-                {% if page.url == '/index.html' %}
+                
+
+                              
+            </div>
+          
+        </div>
+
+    </header>
+
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <h1>Hello world welcome to jekyll blog</h1>
+
+<p>An awesome introduction to jekyll and its features. An awesome introduction to jekyll and its features.An awesome introduction to jekyll and its features.An awesome introduction to jekyll and its features.An awesome introduction to jekyll and its features.An awesome introduction to jekyll and its features. An awesome introduction to jekyll and its features.</p>
+
+<h3>Hello world welcome to jekyll blog</h3>
+
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+<!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <ul class="list-inline text-center">
-                        <li>
+                         <li>
                             <a href="https://twitter.com/fromdenisvieira" target="_blank">
                                 <span class="fa-stack fa-lg">
                                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -115,7 +201,7 @@
                                     <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                                 </span>
                             </a>
-                        </li>   
+                        </li>  
                         <li>
                             <a href="https://github.com/fromdenisvieira" target="_blank">
                                 <span class="fa-stack fa-lg">
@@ -124,30 +210,35 @@
                                 </span>
                             </a>
                         </li>
-                        <!--
-                     <aside class="sharing">
-                        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                        <script>(function(d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0];
-                          if (d.getElementById(id)) return;<div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
-                          js = d.createElement(s); js.id = id;
-                          js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.3";
-                          fjs.parentNode.insertBefore(js, fjs);
-                        }(document, 'script', 'facebook-jssdk'));</script>
-                        <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="icon_link"></div>
-                        <div id="fb-root"></div>
-                        
-                    </aside>  
-                    -->
-                    </ul>  
-
-
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; <a href="">FROMDENISVIEIRA</a> 2015</p>
                 </div>
-                {% endif %}
-
-                              
             </div>
-          
         </div>
+    </footer>
 
-    </header>
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/js/clean-blog.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-58369825-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+</body>
+
+</html>
