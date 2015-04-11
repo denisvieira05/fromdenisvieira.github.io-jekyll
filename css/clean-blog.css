@@ -391,3 +391,13 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+
+{
+  margin-top: -100px;
+
+}
+@media only screen and (min-width: 768px) {
+  .social-header {
+    margin-top: -50px;
+  }
+}
