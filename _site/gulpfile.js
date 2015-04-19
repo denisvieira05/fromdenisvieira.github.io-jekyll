@@ -1,28 +1,60 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var concat = require('gulp-concat');
-var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
-var rename = require('gulp-rename');
+var gulp = require('gulp'),
+        sass = require('gulp-sass'),
+        autoprefixer = require('gulp-autoprefixer'),
+        minifycss = require('gulp-minify-css'),
+        rename = require('gulp-rename');
 
-var paths = {
-  sass: ['./scss/**/*.scss']
-};
+gulp.task('express', function() {
+  var express = require('express');
+  var app = express();
+  app.use(require('connect-livereload')({port: 4002}));
+  app.use(express.static(__dirname));
+  app.listen(4000);
+      console.log("\n" +
+        "===============================================\n" +
+        " Application running at: http://localhost:4000 \n" +
+        "===============================================\n"
+    );
+});
 
-gulp.task('default', ['sass']);
+var tinylr;
+gulp.task('livereload', function() {
+  tinylr = require('tiny-lr')();
+  tinylr.listen(4002);
+});
 
-gulp.task('sass', function(done) {
-  gulp.src('./css/scss/clean-blog-sass.scss')
-    .pipe(sass())
-    .pipe(gulp.dest('./css/'))
-    .pipe(minifyCss({
-      keepSpecialComments: 0
-    }))
-    .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./css/'))
-    .on('end', done);
+function notifyLiveReload(event) {
+  var fileName = require('path').relative(__dirname, event.path);
+
+  tinylr.changed({
+    body: {
+      files: [fileName]
+    }
+  });
+}
+
+gulp.task('styles', function() {
+      return gulp.src(__dirname + "/css/scss/clean-blog-sass.scss")
+        .pipe(sass({
+            errLogToConsole: true,
+            includePaths: [
+                __dirname + "/css/scss"
+            ],
+            outputStyle: "expanded"
+        }))
+        .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
+        .pipe(gulp.dest('./css'))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(minifycss())
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(paths.sass, ['sass']);
+  gulp.watch('css/scss/*.scss', ['styles']);
+  gulp.watch('./*.html', notifyLiveReload);
+  gulp.watch('./css/*.css', notifyLiveReload);
+});
+
+gulp.task('default', ['styles', 'express', 'livereload', 'watch'], function() {
+
 });
